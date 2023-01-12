@@ -1,72 +1,77 @@
 * {
   box-sizing: border-box;
-}
-
-body, html {
-
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-  font-size: 12px;
-
-  height: 100%;
-  padding: 0;
   margin: 0;
+  outline: none;
+  padding: 0;
 }
 
-a:link {
-  text-decoration: none;
-}
-
-.content,
-.content > div {
-  width: 100%;
+html, body, #container {
   height: 100%;
-  overflow: hidden;
 }
 
-.content > .message {
-  text-align: center;
-  display: table;
-
-  font-size: 16px;
-  color: #111;
-}
-
-.content > .message .note {
-  vertical-align: middle;
-  text-align: center;
-  display: table-cell;
-}
-
-.content .error .details {
-  max-width: 500px;
-  font-size: 12px;
-  margin: 20px auto;
-  text-align: left;
-}
-
-.content .error pre {
-  border: solid 1px #CCC;
-  background: #EEE;
-  padding: 10px;
-}
-
-.content:not(.with-error) .error,
-.content.with-error .intro,
-.content.with-diagram .intro {
+.hidden {
   display: none;
 }
 
-
-.content .canvas,
-.content.with-error .canvas {
-  visibility: hidden;
+.panel {
+  background-color: #fafafa;
+  border: solid 1px #ccc;
+  border-radius: 2px;
+  font-family: 'Arial', sans-serif;
+  padding: 10px;
 }
 
-.content.with-diagram .canvas {
-  visibility: visible;
+.djs-label {
+  font-family: 'Arial', sans-serif;
 }
 
+.bpmn-icon-task.red {
+  color: #cc0000 !important;
+}
+
+.bpmn-icon-task.yellow {
+  color: #ffc800 !important;
+}
+
+.bpmn-icon-task.green {
+  color: #52B415 !important;
+}
+
+#quality-assurance {
+  color: #111;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#quality-assurance #form input {
+  border: solid 1px #ccc;
+  border-radius: 2px;
+  font-family: 'Arial', sans-serif;
+  padding: 10px;
+}
+
+#quality-assurance #form input[type=text] {
+  width: 100%;
+}
+
+#quality-assurance #form #warning {
+  background-color: rgba(255, 0, 0, 0.25);
+  border-radius: 2px;
+  padding: 10px;
+}
+
+#quality-assurance #form input[type=submit] {
+  background-color: #FAFAFA;
+  color: #111;
+}
+
+#hint {
+  bottom: 20px;
+  left: 20px;
+  position: absolute;
+}
 .buttons {
   position: fixed;
   bottom: 20px;
@@ -95,3 +100,4 @@ a:link {
 .buttons a.active {
   opacity: 1.0;
 }
+
